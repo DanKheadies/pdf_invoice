@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+// import 'package:intl/intl.dart';
 import 'package:printing/printing.dart';
 
 // import 'package:makepdfs/models/invoice.dart';
@@ -41,7 +42,7 @@ class _PdfPageState extends State<PdfPage> {
 
     List<Map<String, dynamic>> loods = [
       {
-        'item': '1. Loodsgeld',
+        'item': '3. Loodsgeld',
         'quantity': 4,
         'price': 56,
         'total': 224,
@@ -53,6 +54,9 @@ class _PdfPageState extends State<PdfPage> {
         'total': 20,
       },
     ];
+
+    loods.sort((a, b) => (a['item']).compareTo(b['item']));
+    print(loods);
 
     List<Map<String, dynamic>> precariorechten = [
       {
